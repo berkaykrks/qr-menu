@@ -1,245 +1,362 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-
-
-*{
+/* Genel Stil Reset ve Font (Google Fonts'tan Poppins veya Inter kullanılması tavsiye edilir) */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
-    border:none;
-    outline: none;
-    scroll-behavior: smooth;
-    font-family: 'Poppins',sans-serif;
-}
-:root{
-    --bg-color:#ffffff;
-    --second-bg-color:#5f2222;
-    --text-color:#ededed;
-    --main-color:#997c45;
-}
-html{
-    font-size:62.5%;
-    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif; 
 }
 
-body{
-    background: var(--bg-color);
-    color: var(--text-color);
+/* Yeni Arka Plan Rengi */
+body {
+    background-color: #5f2222; /* Koyu kırmızı/kahverengi ton */
+    color: #f0f0f0; /* Metin rengini açık hale getirdik */
 }
 
-.header{
+/* ---------------------------------
+   1. Header ve Navigasyon
+------------------------------------ */
+.header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 2rem 9%;
-    background: transparent;
+    padding: 20px 5%;
+    background: #5f2222; /* Header arka planı da aynı renk */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
-    transition: top 0.3s ease;
-}
-.header.hide {
-    top: -100px; /* Yukarı kaydırarak gizler */
-    position: fixed;
-    width: 100%;
-    z-index: 10;
+    z-index: 1000; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Gölgeyi daha belirgin hale getirdik */
 }
 
-.header.sticky{
-    background: var(--bg-color)
+.logo {
+    font-size: 28px;
+    color: #f0f0f0; /* Logoyu açık renk yaptık */
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: -0.5px;
 }
 
-.logo{
-    position: relative;
-    font-size: 2.5rem;
-    color: var(--text-color);
-    font-weight: 600;
-}
-
-.navbar{
-    position: relative;
-}
-
-.navbar a{
-    font-size: 1.7rem;
-    color: var(--text-color);
+.navbar a {
+    font-size: 16px;
+    color: #f0f0f0; /* Navigasyon linklerini açık renk yaptık */
     font-weight: 500;
-    margin-left: 3.5rem;
-    transition: .3s;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: color 0.3s;
 }
 
 .navbar a:hover,
-.navbar a.active{
-    color: var(--main-color);
+.navbar a.active {
+    color: #ffcc00; /* Vurgu rengini sarıya çevirdik */
 }
 
-
-
-section{
-    min-height: 100vh;
-    padding: 10rem 9% 2rem;
-}
-
-/*card*/
-
-.card{
-    background: var(--second-bg-color);
-}
-
-.card h2{
-    margin-bottom: 4rem;
-}
-
-.card-container{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    gap: 2.5rem;
-}
-
-.card-container .card-box{
-    position: relative;
-    border-radius: 2rem;
-    box-shadow: 0 0 1rem var(--bg-color);
-    overflow: hidden;    
-    width: 100%; /* Kartın genişliği ayarlandı */
-    height: 20rem; /* Yüksekliği resme göre otomatik olarak ayarlanacak */
-}
-
-.card-box img{
-    width: 100%; 
-    height: 20rem; 
-    object-fit: cover;
-    transition: transform 0.5s ease; 
-}
-
-.card-box:hover img{
-    transform: scale(1.1);
-}
-
-/*Denemelik*/
-/* Sol alt köşedeki yazıyı sabitler, her zaman görünür */
-.card-box h4.bottom-left {
-    position: absolute;  /* Konumu sabitler */
-    bottom: 1rem;        /* Alt kenardan uzaklık */
-    left: 1rem;          /* Sol kenardan uzaklık */
-    font-size: 1.5rem;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5); /* Şeffaf bir arka plan */
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    z-index: 2;          /* Diğer elementlerin üstünde olmasını sağlar */
-}
-
-/* Kart hover edildiğinde sol alttaki yazıyı gizler */
-.card-box:hover .bottom-left {
-    display: none;
-}
-
-/* Ortadaki yazı sadece hover sırasında görünür */
-.card-layer h4 {
-    font-size: 3rem;
-    color: white;
-    display: none; /* Varsayılan olarak gizli */
-}
-
-
-/*Denemelik bitiş*/
-.card-box a {
-    text-decoration: none;
-    color: white;   
-    position: relative;     /* İçindeki öğelerin yerleşimi için */
-    display: block;         /* A etiketi tam alanı kaplayacak */
-}
-
-.card-box a:hover h4 {
-    color: #ffffff;
-}
-
-/* Mobil cihazlar (max-width: 768px) */
-@media (max-width: 768px) {
-    .card-container {
-        grid-template-columns: 1fr; /* Mobilde tek sütun */
-        gap: 1.5rem;
-    }
-
-    .header {
-        padding: 2rem 5%;
-    }
-
-    .navbar a {
-        font-size: 1.4rem;
-    }   
-}
-
-/* Tabletler (min-width: 768px ve max-width: 1024px) */
-@media (min-width: 768px) and (max-width: 1024px) {
-    .card-container {
-        grid-template-columns: repeat(2, 1fr); /* Tabletlerde iki sütun */
-        gap: 2rem;
-    }
-
-    .header {
-        padding: 2rem 7%;
-    }
-
-    .navbar a {
-        font-size: 1.6rem;
-    }
-    
-}
-
-/* Laptoplar ve masaüstü cihazlar (min-width: 1024px) */
-@media (min-width: 1024px) {
-    .card-container {
-        grid-template-columns: repeat(3, 1fr); /* Masaüstünde üç sütun */
-        gap: 2.5rem;
-    }
-
-    .header {
-        padding: 2rem 9%;
-    }
-
-    .navbar a {
-        font-size: 1.7rem;
-    }
-   
-}
-
-/* Hamburger ikonu başlangıçta gizli */
-#menu-icon {
-    display: none;    
-    font-size: 3.6rem;
+.menu-icon {
+    font-size: 26px;
+    color: #f0f0f0; /* Mobil menü ikonunu açık renk yaptık */
     cursor: pointer;
+    display: none; 
 }
 
-/* Ekran genişliği 600px ve altına düştüğünde */
-@media (max-width: 600px) {
+/* ---------------------------------
+   2. Kategori Kartları (.card-container)
+------------------------------------ */
+.card {
+    padding: 120px 5% 50px; 
+    min-height: 100vh;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 30px;
+    width: 100%;
+    max-width: 1100px; 
+    margin: 0 auto; 
+    justify-items: stretch; 
+}
+
+.card-box {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Kart gölgesini biraz koyulaştırdık */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    aspect-ratio: 16 / 9; 
+}
+
+.card-box:hover {
+    transform: scale(1.05); /* Hover'da daha fazla büyüme efekti */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4); /* Hover'da daha belirgin gölge */
+}
+
+.card-box img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.4s;
+}
+
+.card-box:hover img {
+    opacity: 0.9; /* Hover'da hafif kararma */
+}
+
+.card-box h4 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    color: #fff;
+    /* Başlık için belirgin bir arka plan ve geçiş */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0));
+    margin: 0;
+    text-align: left;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: opacity 0.3s ease; /* Hover'da kaybolma animasyonu */
+}
+
+/* Hover'da başlığın kaybolması */
+.card-box:hover h4 {
+    opacity: 0;
+}
+
+/* ---------------------------------
+   3. Dinamik Menü İçeriği (.menu-display)
+------------------------------------ */
+.menu-display {
+    padding: 20px 5%;
+    max-width: 800px; 
+    margin: 0 auto;
+    background-color: #472121; /* Menü gösterim alanı arka planı */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hidden {
+    display: none !important;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    color: #ffcc00; /* Geri butonunu vurgu rengi yaptık */
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 25px;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.back-button:hover {
+    color: #e6b800; /* Hover rengi */
+}
+
+.back-button .bx {
+    margin-right: 8px;
+    font-size: 1.3rem;
+}
+
+.menu-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #f0f0f0; /* Başlık rengini açık yaptık */
+    border-bottom: 3px solid #ffcc00; /* Alt çizgiyi vurgu rengi yaptık */
+    display: inline-block;
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+.items-list {
+    background: #5C3D3D; /* İçerik listesi arka planı */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item {
+    padding: 15px 20px;
+    border-bottom: 1px solid #7a5a5a; /* Daha açık bir çizgi */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.menu-item > div {
+    max-width: 75%; 
+}
+
+.menu-item h3 {
+    font-size: 1.2rem;
+    color: #f0f0f0; /* Menü öğesi başlık rengi */
+    margin-bottom: 3px;
+    font-weight: 600;
+}
+
+.menu-item .description {
+    font-size: 0.9rem;
+    color: #ccc; /* Menü öğesi açıklama rengi */
+}
+
+.menu-item .price {
+    font-size: 1.2rem;
+    color: #ffcc00; /* Menü öğesi fiyat rengi */
+    font-weight: 700;
+}
+
+/* ---------------------------------
+   4. Hakkımızda Bölümü
+------------------------------------ */
+.about {
+    padding: 50px 5%;
+    text-align: center;
+    background-color: #5f2222; /* Hakkımızda bölümü arka planı */
+    border-top: 1px solid #7a5a5a;
+    color: #f0f0f0; /* Metin rengini açık yaptık */
+}
+
+.about h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: #f0f0f0; /* Başlık rengini açık yaptık */
+}
+
+.about p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ccc; /* Açıklama metin rengi */
+}
+
+
+/* ---------------------------------
+   5. Media Sorguları (Responsive Düzen)
+------------------------------------ */
+
+/* Tablet (min-width: 600px) */
+@media (min-width: 600px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+/* Masaüstü (min-width: 992px) */
+@media (min-width: 992px) {
+    .card-container {
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 40px;
+    }
+
+    /* BURASI ÇOK ÖNEMLİ: 7. kartı (Yemekler) 3 sütunlu düzende ortalar */
+    .card-container > .card-box:nth-child(7) {
+        grid-column: 2 / 3; 
+        max-width: 300px; /* Ortalanmış kartın genişliğini ayarlarız */
+        margin: 0 auto; /* Bu kartı kendi grid hücresi içinde ortalar */
+    }
+    
+    .menu-icon {
+        display: none; 
+    }
+}
+
+/* Mobil Menü İçin Media Sorgusu */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 5%;
+    }
+    
+    .logo {
+        font-size: 24px;
+    }
+
+    .menu-icon {
+        display: block; 
+    }
+
     .navbar {
-        display: none; /* Menü gizlenir */
-        flex-direction: column; /* Açılınca dikey görünsün */
-    }
-    
-    #menu-icon {
-        display: block; /* Hamburger ikonu göster */
-    }
-    
-    .navbar.active {
-        display: flex; /* İkon tıklanınca menü görünür hale gelir */
         position: absolute;
-        top: 100%; /* Üst menünün hemen altına gelir */
+        top: 100%;
         left: 0;
-        background-color: white;
         width: 100%;
-        padding: 1rem 0;
+        padding: 10px 5%;
+        background: #5C3D3D; /* Mobil menü arka planı */
+        border-top: 1px solid #7a5a5a;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display: none; 
+        text-align: center;
+    }
+
+    .navbar.active {
+        display: block; 
     }
 
     .navbar a {
-        padding: 1rem;
-        text-align: center;
-        width: 100%;
-        color: #000;
+        display: block;
+        margin: 10px 0;
+        font-size: 17px;
+        color: #f0f0f0; /* Mobil menü link rengi */
     }
+
+    .card {
+        padding-top: 80px; 
+    }
+
+    .menu-item {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .menu-item .price {
+        margin-top: 5px;
+        align-self: flex-end; 
+    }
+}
+
+/* ---------------------------------
+   6. Footer (Altbilgi)
+------------------------------------ */
+.footer {
+    padding: 20px 5%;
+    background: #462626; /* Hakkımızda bölümüyle aynı koyu arka plan */
+    border-top: 1px solid #7a5a5a;
+    text-align: center;
+    color: #f0f0f0; /* Metin rengi */
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+.footer p:first-child {
+    font-weight: 600;
+}
+
+/* Yazar linki stili */
+.footer .author-link {
+    color: #ffcc00; /* Vurgu rengi ile aynı (sarı) */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer .author-link:hover {
+    color: #e6b800; /* Hafif koyu hover rengi */
+    text-decoration: underline;
 }

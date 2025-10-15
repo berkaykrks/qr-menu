@@ -1,79 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Flue QR Menu</title>
+    <link rel="stylesheet" href="css/style.css"> 
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <header class="header">
         <a href="index.html" class="logo">Flue.</a>
         <div id="menu-icon" class="menu-icon"><i class='bx bx-menu'></i></div>
-            <nav class="navbar">
-                <a href="#about">Menü</a>
-                <a href="#education">Hakkımızda</a>
-                <span class="active-nav"></span>
-            </nav>        
+        <nav class="navbar">
+            <a href="#card">Menü</a>
+            <a href="#about-section">Hakkımızda</a> 
+            <span class="active-nav"></span>
+        </nav>
     </header>
 
-    <!-- Menüdeki kartlar -->
     <section class="card" id="card">
-        <div class="card-container">
-            <!-- Sıcak İçecekler -->
-            <div class="card-box sicak-icecekler">                 
-                <a href="sicakicecekler.html"> <!-- Yönlendirme linki -->
-                    <img src="images/hot1.jpg" alt="">
-                    <h4 class="bottom-left">Sıcak İcecekler</h4>                   
-                </a>
+        <div class="card-container" id="category-cards-container">
+
+            <div class="card-box" data-category="sicakicecekler"> 
+                <img src="images/hot1.jpg" alt="Sıcak İçecekler">
+                <h4 class="bottom-left">Sıcak İcecekler</h4> 
             </div>
-            <!-- Tatlılar -->             
-            <div class="card-box tatlilar">                
-                <a href="tatlilar.html"> <!-- Yönlendirme linki -->                    
-                    <img src="images/tatlı1.jpg" alt="">
-                    <h4 class="bottom-left">Tatlılar</h4> 
-                </a>
+
+         
+            <div class="card-box" data-category="tatlilar">
+                <img src="images/tatlı1.jpg" alt="Tatlılar">
+                <h4 class="bottom-left">Tatlılar</h4> 
             </div>
-            <!-- Herbal Teas -->
-            <div class="card-box herbal-teas">                
-                <a href="herbalteas.html"> <!-- Yönlendirme linki -->                    
-                    <img src="images/herbal1.jpg" alt="">
-                    <h4 class="bottom-left">Herbal Teas</h4> 
-                </a>
+
+            <div class="card-box" data-category="herbalteas">
+                <img src="images/herbal1.jpg" alt="Herbal Teas">
+                <h4 class="bottom-left">Herbal Teas</h4> 
             </div>
-            <!-- Coctails -->
-            <div class="card-box coctails">
-                
-                <a href="coctails.html"> <!-- Yönlendirme linki -->                    
-                    <img src="images/coctail3.jpg" alt="">
-                    <h4 class="bottom-left">Coctails</h4> 
-                </a>
+
+            <div class="card-box" data-category="coctails">
+                <img src="images/coctail3.jpg" alt="Coctails">
+                <h4 class="bottom-left">Coctails</h4> 
             </div>
-            <!-- Smoothies -->            
-            <div class="card-box smoothies">
-                <a href="smoothies.html"> <!-- Yönlendirme linki -->                    
-                    <img src="images/smoothie3.jpg" alt="">
-                    <h4 class="bottom-left">Smoothie</h4> 
-                </a>
+
+            <div class="card-box" data-category="smoothies">
+                <img src="images/smoothie3.jpg" alt="Smoothie">
+                <h4 class="bottom-left">Smoothie</h4> 
             </div>
-            <!-- Brew Bar -->           
-            <div class="card-box brew-bar">
-                
-                <a href="brewbar.html"> <!-- Yönlendirme linki -->                    
-                    <img src="images/filtrekahve.png" alt="">
-                    <h4 class="bottom-left">brew bar</h4> 
-                </a>
+
+            <div class="card-box" data-category="brewbar">
+                <img src="images/filtrekahve.png" alt="Brew Bar">
+                <h4 class="bottom-left">Brew Bar</h4> 
             </div>
-            <!-- Yemekler -->
-            <div class="card-box yemekler">
-                <a href="yemekler.html"> <!-- Yönlendirme linki -->                    
-                    <img src="images/yemek1.jpg" alt="">
-                    <h4 class="bottom-left">Yemekler</h4> 
-                </a>
+
+            <div class="card-box" data-category="yemekler">
+                <img src="images/yemek1.jpg" alt="Yemekler">
+                <h4 class="bottom-left">Yemekler</h4> 
             </div>
+            
         </div>
+        
+        <div id="menu-content-display" class="menu-display hidden">
+            <button id="back-to-categories" class="back-button"><i class='bx bx-arrow-back'></i> Geri</button>
+            
+            <h2 id="category-title" class="menu-title"></h2>
+            
+            <div id="category-items-list" class="items-list">
+                </div>
+        </div>
+        
     </section>
+
+    <section class="about" id="about-section">
+        <h2>Hakkımızda</h2>
+        <p>Flue olarak taze, kaliteli ve özgün lezzetleri misafirlerimizle buluşturuyoruz...</p>
+    </section>
+    <footer class="footer">
+        <p>Tasarım ve Geliştirme: Berkay Karakus (<a href="https://berkaykrks.netlify.app" target="_blank" class="author-link">berkaykrks</a>)</p>
+        <p>&copy; 2025 Berkay. Tüm Hakları Saklıdır.</p>
+    </footer>
 
     <script src="js/script.js"></script>
 </body>
