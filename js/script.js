@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 2. Verileri Yükleme Fonksiyonu
     function loadMenuData() {
-        // Doğru yolu kontrol edin: /js/menuData.json veya js/menuData.json
+        // menuData.json dosyasını js klasöründen çeker
         fetch('js/menuData.json') 
             .then(response => {
                 if (!response.ok) {
@@ -27,11 +27,12 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             .catch(error => {
                 console.error('Menü verileri yüklenirken hata oluştu:', error);
-                alert('Menü verileri yüklenemedi. Lütfen konsolu kontrol edin.');
+                // Kullanıcıya da bir mesaj gösterilebilir:
+                // alert('Menü verileri yüklenemedi. Lütfen internet bağlantınızı kontrol edin.');
             });
     }
 
-    // 3. Menüyü Gösterme Fonksiyonu
+    // 3. Menüyü Gösterme Fonksiyonu (GÜNCELLENMİŞ)
     function displayCategory(categoryKey) {
         const categoryData = menuData[categoryKey];
         if (!categoryData) {
@@ -39,9 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Kategori adını başlık için düzenleme (ör: sicakicecekler -> Sıcak İçecekler)
+        // Kategori adını başlık için düzenleme 
         let displayTitle = categoryKey.charAt(0).toUpperCase() + categoryKey.slice(1);
-        displayTitle = displayTitle.replace(/([A-Z])/g, ' $1').trim(); // camelCase'i ayır
+        displayTitle = displayTitle.replace(/([A-Z])/g, ' $1').trim();
+        displayTitle = displayTitle.replace('icecekler', 'İçecekler'); // Özel durum düzeltmesi
 
         categoryTitle.textContent = displayTitle;
         categoryItemsList.innerHTML = '';
@@ -50,15 +52,27 @@ document.addEventListener('DOMContentLoaded', () => {
         cardContainer.classList.add('hidden'); 
         menuDisplay.classList.remove('hidden'); 
         
-        // Menü öğelerini oluşturma
+        // Menü öğelerini oluşturma ve FOTOĞRAF EKLEME
         categoryData.forEach(item => {
+            // Fotoğraf URL'si kontrolü
+            const hasImage = item.fotograf_url && item.fotograf_url.trim() !== '';
+
             const itemHTML = `
-                <div class="menu-item">
-                    <div>
-                        <h3>${item.ad}</h3>
-                        <p class="description">${item.aciklama}</p>
+                <div class="menu-item ${hasImage ? 'with-image' : 'no-image'}">
+                    
+                    ${hasImage ? `
+                        <div class="item-image-container">
+                            <img src="${item.fotograf_url}" alt="${item.ad}" class="item-image">
+                        </div>
+                    ` : ''}
+
+                    <div class="menu-item-content">
+                        <div class="item-text-info">
+                            <h3>${item.ad}</h3>
+                            <p class="description">${item.aciklama}</p>
+                        </div>
+                        <p class="price">${item.fiyat}</p>
                     </div>
-                    <p class="price">${item.fiyat}</p>
                 </div>
             `;
             categoryItemsList.innerHTML += itemHTML;

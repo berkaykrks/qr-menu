@@ -13,7 +13,7 @@ body {
 }
 
 /* ---------------------------------
-   1. Header ve Navigasyon
+  1. Header ve Navigasyon
 ------------------------------------ */
 .header {
     position: fixed;
@@ -21,17 +21,17 @@ body {
     left: 0;
     width: 100%;
     padding: 20px 5%;
-    background: #5f2222; /* Header arka planı da aynı renk */
+    background: #5f2222; 
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 1000; 
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Gölgeyi daha belirgin hale getirdik */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); 
 }
 
 .logo {
     font-size: 28px;
-    color: #f0f0f0; /* Logoyu açık renk yaptık */
+    color: #f0f0f0; 
     font-weight: 700;
     text-decoration: none;
     letter-spacing: -0.5px;
@@ -39,7 +39,7 @@ body {
 
 .navbar a {
     font-size: 16px;
-    color: #f0f0f0; /* Navigasyon linklerini açık renk yaptık */
+    color: #f0f0f0; 
     font-weight: 500;
     text-decoration: none;
     margin-left: 30px;
@@ -48,18 +48,18 @@ body {
 
 .navbar a:hover,
 .navbar a.active {
-    color: #ffcc00; /* Vurgu rengini sarıya çevirdik */
+    color: #ffcc00; 
 }
 
 .menu-icon {
     font-size: 26px;
-    color: #f0f0f0; /* Mobil menü ikonunu açık renk yaptık */
+    color: #f0f0f0; 
     cursor: pointer;
     display: none; 
 }
 
 /* ---------------------------------
-   2. Kategori Kartları (.card-container)
+  2. Kategori Kartları (.card-container)
 ------------------------------------ */
 .card {
     padding: 120px 5% 50px; 
@@ -84,14 +84,14 @@ body {
     border-radius: 12px;
     overflow: hidden;
     cursor: pointer;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Kart gölgesini biraz koyulaştırdık */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); 
     transition: transform 0.4s ease, box-shadow 0.4s ease;
     aspect-ratio: 16 / 9; 
 }
 
 .card-box:hover {
-    transform: scale(1.05); /* Hover'da daha fazla büyüme efekti */
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4); /* Hover'da daha belirgin gölge */
+    transform: scale(1.05); 
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4); 
 }
 
 .card-box img {
@@ -103,7 +103,7 @@ body {
 }
 
 .card-box:hover img {
-    opacity: 0.9; /* Hover'da hafif kararma */
+    opacity: 0.9; 
 }
 
 .card-box h4 {
@@ -113,14 +113,13 @@ body {
     width: 100%;
     padding: 15px;
     color: #fff;
-    /* Başlık için belirgin bir arka plan ve geçiş */
     background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0));
     margin: 0;
     text-align: left;
     font-size: 1.4rem;
     font-weight: 600;
     letter-spacing: 0.5px;
-    transition: opacity 0.3s ease; /* Hover'da kaybolma animasyonu */
+    transition: opacity 0.3s ease; 
 }
 
 /* Hover'da başlığın kaybolması */
@@ -129,13 +128,13 @@ body {
 }
 
 /* ---------------------------------
-   3. Dinamik Menü İçeriği (.menu-display)
+  3. Dinamik Menü İçeriği (.menu-display)
 ------------------------------------ */
 .menu-display {
     padding: 20px 5%;
     max-width: 800px; 
     margin: 0 auto;
-    background-color: #472121; /* Menü gösterim alanı arka planı */
+    background-color: #472121; 
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -147,7 +146,7 @@ body {
 .back-button {
     background: none;
     border: none;
-    color: #ffcc00; /* Geri butonunu vurgu rengi yaptık */
+    color: #ffcc00; 
     font-size: 1rem;
     cursor: pointer;
     margin-bottom: 25px;
@@ -159,7 +158,7 @@ body {
 }
 
 .back-button:hover {
-    color: #e6b800; /* Hover rengi */
+    color: #e6b800; 
 }
 
 .back-button .bx {
@@ -171,68 +170,109 @@ body {
     text-align: center;
     margin-bottom: 40px;
     font-size: 2.5rem;
-    color: #f0f0f0; /* Başlık rengini açık yaptık */
-    border-bottom: 3px solid #ffcc00; /* Alt çizgiyi vurgu rengi yaptık */
+    color: #f0f0f0; 
+    border-bottom: 3px solid #ffcc00; 
     display: inline-block;
     padding-bottom: 5px;
     width: 100%;
 }
 
 .items-list {
-    background: #5C3D3D; /* İçerik listesi arka planı */
+    background: #5C3D3D; 
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* FOTOĞRAF DESTEĞİ İÇİN YENİ CSS STİLLERİ */
 .menu-item {
-    padding: 15px 20px;
-    border-bottom: 1px solid #7a5a5a; /* Daha açık bir çizgi */
+    /* Genel menu-item yapısını flex yaparak fotoğraf ve içeriği hizalarız */
     display: flex;
     justify-content: space-between;
     align-items: flex-start; 
+    gap: 15px; /* Fotoğraf ve içerik arasındaki boşluk */
+    padding: 20px;
+    border-bottom: 1px solid #7a5a5a;
+    position: relative; /* Mobil fiyat pozisyonlaması için */
 }
 
 .menu-item:last-child {
     border-bottom: none;
 }
 
-.menu-item > div {
-    max-width: 75%; 
+/* Fotoğraf Kapsayıcısı */
+.item-image-container {
+    width: 90px; 
+    height: 90px; 
+    min-width: 90px; 
+    border-radius: 8px; 
+    overflow: hidden;
+    flex-shrink: 0; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+
+.item-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+/* Sadece içeriğin olduğu kısım */
+.menu-item-content {
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+    flex-grow: 1; 
+    max-width: 100%; 
+}
+
+.menu-item.with-image .menu-item-content {
+    /* Fotoğraf varsa içeriğin kapladığı alanı kısıtlarız */
+    max-width: calc(100% - 105px); /* 90px resim + 15px boşluk */
+}
+
+/* Ürün Adı ve Açıklama Alanı */
+.menu-item-content .item-text-info {
+    flex-grow: 1;
+    max-width: 90%; /* Fiyat için yer bırakırız */
+}
+
 
 .menu-item h3 {
     font-size: 1.2rem;
-    color: #f0f0f0; /* Menü öğesi başlık rengi */
+    color: #f0f0f0; 
     margin-bottom: 3px;
     font-weight: 600;
 }
 
 .menu-item .description {
     font-size: 0.9rem;
-    color: #ccc; /* Menü öğesi açıklama rengi */
+    color: #ccc; 
 }
 
 .menu-item .price {
     font-size: 1.2rem;
-    color: #ffcc00; /* Menü öğesi fiyat rengi */
+    color: #ffcc00; 
     font-weight: 700;
+    align-self: flex-end; /* Fiyatı sağa hizalar */
+    min-width: 60px; /* Fiyatın kaymasını önler */
 }
 
 /* ---------------------------------
-   4. Hakkımızda Bölümü
+  4. Hakkımızda Bölümü
 ------------------------------------ */
 .about {
     padding: 50px 5%;
     text-align: center;
-    background-color: #5f2222; /* Hakkımızda bölümü arka planı */
+    background-color: #5f2222; 
     border-top: 1px solid #7a5a5a;
-    color: #f0f0f0; /* Metin rengini açık yaptık */
+    color: #f0f0f0; 
 }
 
 .about h2 {
     font-size: 2.2rem;
     margin-bottom: 15px;
-    color: #f0f0f0; /* Başlık rengini açık yaptık */
+    color: #f0f0f0; 
 }
 
 .about p {
@@ -240,12 +280,12 @@ body {
     margin: 0 auto;
     font-size: 1rem;
     line-height: 1.6;
-    color: #ccc; /* Açıklama metin rengi */
+    color: #ccc; 
 }
 
 
 /* ---------------------------------
-   5. Media Sorguları (Responsive Düzen)
+  5. Media Sorguları (Responsive Düzen)
 ------------------------------------ */
 
 /* Tablet (min-width: 600px) */
@@ -262,20 +302,33 @@ body {
         gap: 40px;
     }
 
-    /* BURASI ÇOK ÖNEMLİ: 7. kartı (Yemekler) 3 sütunlu düzende ortalar */
     .card-container > .card-box:nth-child(7) {
         grid-column: 2 / 3; 
-        max-width: 300px; /* Ortalanmış kartın genişliğini ayarlarız */
-        margin: 0 auto; /* Bu kartı kendi grid hücresi içinde ortalar */
+        max-width: 300px; 
+        margin: 0 auto; 
     }
     
     .menu-icon {
         display: none; 
     }
+    
+    .menu-item-content {
+        flex-direction: row; /* Masaüstünde fiyatı menü öğesiyle yan yana tutar */
+    }
+    
+    .menu-item-content .item-text-info {
+        max-width: 75%;
+    }
+
+    .menu-item .price {
+        align-self: flex-start;
+    }
 }
 
-/* Mobil Menü İçin Media Sorgusu */
+/* Mobil Menü ve İçerik Media Sorgusu */
 @media (max-width: 768px) {
+    /* ... Mobil Navigasyon Stilleri (Aynı Kalır) ... */
+
     .header {
         padding: 15px 5%;
     }
@@ -287,56 +340,50 @@ body {
     .menu-icon {
         display: block; 
     }
-
-    .navbar {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        padding: 10px 5%;
-        background: #5C3D3D; /* Mobil menü arka planı */
-        border-top: 1px solid #7a5a5a;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        display: none; 
-        text-align: center;
-    }
-
+    
     .navbar.active {
         display: block; 
-    }
-
-    .navbar a {
-        display: block;
-        margin: 10px 0;
-        font-size: 17px;
-        color: #f0f0f0; /* Mobil menü link rengi */
     }
 
     .card {
         padding-top: 80px; 
     }
 
+    /* GÜNCELLENMİŞ MOBİL MENÜ ÖĞESİ */
     .menu-item {
-        flex-direction: column;
+        flex-direction: row; /* Fotoğraf ve içerik yan yana */
         align-items: flex-start;
-        text-align: left;
+        padding: 15px;
     }
-    
+
+    .menu-item.with-image .menu-item-content {
+        max-width: 70%; /* Fotoğraf varken içerik genişliği */
+    }
+
+    .menu-item-content {
+        flex-direction: column; /* Mobil: Ad ve Açıklama üst üste */
+        margin-right: 60px; /* Fiyat için boşluk bırakır */
+    }
+
     .menu-item .price {
-        margin-top: 5px;
+        /* Fiyatı kartın sağ üst köşesine konumlandırır */
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        font-size: 1.1rem;
         align-self: flex-end; 
     }
 }
 
 /* ---------------------------------
-   6. Footer (Altbilgi)
+  6. Footer (Altbilgi)
 ------------------------------------ */
 .footer {
     padding: 20px 5%;
-    background: #462626; /* Hakkımızda bölümüyle aynı koyu arka plan */
+    background: #462626; 
     border-top: 1px solid #7a5a5a;
     text-align: center;
-    color: #f0f0f0; /* Metin rengi */
+    color: #f0f0f0; 
     font-size: 0.9rem;
     line-height: 1.6;
 }
@@ -349,14 +396,13 @@ body {
     font-weight: 600;
 }
 
-/* Yazar linki stili */
 .footer .author-link {
-    color: #ffcc00; /* Vurgu rengi ile aynı (sarı) */
+    color: #ffcc00; 
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .footer .author-link:hover {
-    color: #e6b800; /* Hafif koyu hover rengi */
+    color: #e6b800; 
     text-decoration: underline;
 }

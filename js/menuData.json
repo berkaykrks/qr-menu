@@ -1,366 +1,70 @@
 {
   "sicakicecekler": [
     {
+      "ad": "Flue Özel Latte",
+      "aciklama": "Yöresel kahve çekirdekleri ve buharlanmış süt ile hazırlanmıştır.",
+      "fiyat": "85 TL",
+      "fotograf_url": "images/latte.jpg" 
+    },
+    {
       "ad": "Americano",
-      "aciklama": "Yoğun ve sert bir başlangıç için ideal, espresso ve sıcak su.",
-      "fiyat": "40₺"
-    },
-    {
-      "ad": "Latte",
-      "aciklama": "Espresso, buharda ısıtılmış bol süt ve ince bir köpük tabakası.",
-      "fiyat": "45₺"
-    },
-    {
-      "ad": "Flat White",
-      "aciklama": "Daha yoğun kahve tadı için az sütlü, kadifemsi köpüklü.",
-      "fiyat": "50₺"
-    },
-    {
-      "ad": "Cappuccino",
-      "aciklama": "Espresso, buharda ısıtılmış süt ve kalın, kabarık süt köpüğü.",
-      "fiyat": "48₺"
-    },
-    {
-      "ad": "Mocha",
-      "aciklama": "Çikolata şurubu, espresso ve buharda ısıtılmış süt, krema ile servis edilir.",
-      "fiyat": "65₺"
-    },
-    {
-      "ad": "Espresso (Single)",
-      "aciklama": "Tek shot yoğun ve aromatik kahve özü.",
-      "fiyat": "35₺"
-    },
-    {
-      "ad": "Sıcak Çikolata",
-      "aciklama": "Gerçek Belçika çikolatasından, krema veya marshmallow ile servis edilir.",
-      "fiyat": "60₺"
-    },
-    {
-      "ad": "Macchiato",
-      "aciklama": "Espressonun üzerinde az miktarda süt köpüğü lekesi.",
-      "fiyat": "42₺"
-    },
-    {
-      "ad": "Chai Tea Latte",
-      "aciklama": "Baharatlı Chai şurubu ve buharda ısıtılmış süt karışımı.",
-      "fiyat": "55₺"
-    },
-    {
-      "ad": "Filter Coffee",
-      "aciklama": "Günlük değişen çekirdeklerden taze demlenmiş klasik filtre kahve.",
-      "fiyat": "45₺"
+      "aciklama": "Yoğun espresso tadını su ile dengeledik.",
+      "fiyat": "70 TL",
+      "fotograf_url": "images/americano.jpg"
     }
   ],
   "tatlilar": [
     {
-      "ad": "Tiramisu",
-      "aciklama": "İtalyan klasiği, kahveli ve maskarpon peynirli, parmak ısırtan lezzet.",
-      "fiyat": "70₺"
-    },
-    {
-      "ad": "Limonlu Cheesecake",
-      "aciklama": "Ev yapımı, ferahlatıcı limon soslu New York tarzı cheesecake.",
-      "fiyat": "65₺"
-    },
-    {
-      "ad": "Brownie",
-      "aciklama": "Akışkan iç yapısı ve yoğun çikolata aroması, dondurma ile servis edilir.",
-      "fiyat": "55₺"
-    },
-    {
-      "ad": "Muzlu Pancake",
-      "aciklama": "3 adet kabartılmış pancake, taze muz ve akçaağaç şurubu.",
-      "fiyat": "85₺"
+      "ad": "Red Velvet Cheesecake",
+      "aciklama": "Kremalı peynir dolgulu, kadife kek tabanlı.",
+      "fiyat": "150 TL",
+      "fotograf_url": "images/redbas.jpg"
     },
     {
       "ad": "Sufle",
-      "aciklama": "Sıcak, akışkan çikolata patlaması, vanilyalı dondurma eşliğinde.",
-      "fiyat": "75₺"
-    },
-    {
-      "ad": "Profiterol",
-      "aciklama": "Minik hamur topları, özel krema dolgusu ve bol çikolata sosu.",
-      "fiyat": "60₺"
-    },
-    {
-      "ad": "Magnolia (Çilekli)",
-      "aciklama": "Kremalı puding, bisküvi ve taze çilek katmanları.",
-      "fiyat": "70₺"
-    },
-    {
-      "ad": "Waffle",
-      "aciklama": "Taze meyveler, nutella ve dondurma ile hazırlanan büyük boy waffle.",
-      "fiyat": "95₺"
-    },
-    {
-      "ad": "Red Velvet Pasta",
-      "aciklama": "Kadifemsi doku, hafif kakao tadı ve krema peynirli frosting.",
-      "fiyat": "80₺"
-    },
-    {
-      "ad": "Dondurma Tabağı",
-      "aciklama": "Üç top, günlük değişen ev yapımı dondurma çeşitleri.",
-      "fiyat": "60₺"
+      "aciklama": "Çikolata severler için sıcak bir kaçış.",
+      "fiyat": "110 TL",
+      "fotograf_url": "images/sufle.jpg"
     }
   ],
   "herbalteas": [
     {
-      "ad": "Yeşil Çay (Sencha)",
-      "aciklama": "Japon Sencha yapraklarından, hafif ve tazeleyici bir tat.",
-      "fiyat": "35₺"
-    },
-    {
-      "ad": "Papatya Çayı",
-      "aciklama": "Sakinleştirici ve dinlendirici, uyku öncesi için ideal.",
-      "fiyat": "35₺"
-    },
-    {
-      "ad": "Kış Çayı (Özel Karışım)",
-      "aciklama": "Zencefil, tarçın, karanfil ve ıhlamurdan oluşan bağışıklık güçlendirici karışım.",
-      "fiyat": "40₺"
-    },
-    {
-      "ad": "Nane Limon",
-      "aciklama": "Taze nane yaprakları ve limon dilimleri ile soğuk algınlığına birebir.",
-      "fiyat": "38₺"
-    },
-    {
-      "ad": "Adaçayı",
-      "aciklama": "Boğaz ağrısı ve rahatlama için kullanılan aromatik bitki çayı.",
-      "fiyat": "35₺"
-    },
-    {
-      "ad": "Oolong Çayı",
-      "aciklama": "Yarı fermente edilmiş, yeşil ve siyah çay arası bir lezzet.",
-      "fiyat": "45₺"
-    },
-    {
-      "ad": "Rooibos",
-      "aciklama": "Güney Afrika'dan kafeinsiz, tatlı ve topraksı kırmızı çay.",
-      "fiyat": "40₺"
-    },
-    {
-      "ad": "Lavanta Çayı",
-      "aciklama": "Hafif floral notalara sahip, stresi azaltmaya yardımcı.",
-      "fiyat": "40₺"
-    },
-    {
-      "ad": "Beyaz Çay (Silver Needle)",
-      "aciklama": "En kaliteli çay tomurcuklarından, çok hafif ve narin tat.",
-      "fiyat": "55₺"
-    },
-    {
-      "ad": "Rezene Çayı",
-      "aciklama": "Sindirim sistemini rahatlatan, anason tadında bitki çayı.",
-      "fiyat": "35₺"
+      "ad": "Zencefilli Kış Çayı",
+      "aciklama": "Zencefil, limon, bal ve taze nane karışımı.",
+      "fiyat": "65 TL",
+      "fotograf_url": "images/herbal_winter.jpg"
     }
   ],
   "coctails": [
     {
-      "ad": "Mavi Kelebek (Alkolsuz)",
-      "aciklama": "Mavi kelebek bezelyesi çayı, misket limonu ve tonik, renk değiştiren eğlence.",
-      "fiyat": "75₺"
-    },
-    {
-      "ad": "Tropik Rüyası (Alkolsuz)",
-      "aciklama": "Mango, ananas ve passion fruit karışımı, hindistan cevizi notalarıyla.",
-      "fiyat": "85₺"
-    },
-    {
-      "ad": "Virgin Mojito",
-      "aciklama": "Taze nane, misket limonu, esmer şeker ve soda.",
-      "fiyat": "70₺"
-    },
-    {
-      "ad": "Deniz Esintisi",
-      "aciklama": "Mavi curaçao şurubu, limon ve nar, ferahlatıcı.",
-      "fiyat": "80₺"
-    },
-    {
-      "ad": "Ahududulu Fizz",
-      "aciklama": "Taze ahududu püresi, limon suyu ve zencefilli gazoz.",
-      "fiyat": "78₺"
-    },
-    {
-      "ad": "Green Apple Smash",
-      "aciklama": "Ekşi yeşil elma, nane ve yeşil limon, buzlu servis.",
-      "fiyat": "75₺"
-    },
-    {
-      "ad": "Çarkıfelek Suyu",
-      "aciklama": "Passion fruit, portakal suyu ve biraz vanilya aroması.",
-      "fiyat": "82₺"
-    },
-    {
-      "ad": "Karpuzlu Breeze",
-      "aciklama": "Taze karpuz suyu, misket limonu ve fesleğen yaprakları.",
-      "fiyat": "79₺"
-    },
-    {
-      "ad": "Berry Blast",
-      "aciklama": "Yaban mersini, böğürtlen ve frenk üzümü karışımı.",
-      "fiyat": "85₺"
-    },
-    {
-      "ad": "Ginger Zing",
-      "aciklama": "Taze zencefil, bal ve sıcak su, limon ile servis edilir.",
-      "fiyat": "68₺"
+      "ad": "Mojito",
+      "aciklama": "Taze nane, misket limonu ve soda.",
+      "fiyat": "120 TL",
+      "fotograf_url": "images/mojito.jpg"
     }
   ],
   "smoothies": [
     {
-      "ad": "Orman Meyveleri",
-      "aciklama": "Çilek, böğürtlen, frambuaz ve yulaf sütü ile yüksek proteinli.",
-      "fiyat": "80₺"
-    },
-    {
-      "ad": "Yeşil Güç",
-      "aciklama": "Ispanak, elma, nane ve zencefil, detoks etkisi için ideal.",
-      "fiyat": "75₺"
-    },
-    {
-      "ad": "Tropikal Mango",
-      "aciklama": "Taze mango, ananas ve biraz hindistan cevizi sütü.",
-      "fiyat": "85₺"
-    },
-    {
-      "ad": "Protein Fırtınası",
-      "aciklama": "Muz, fıstık ezmesi, protein tozu ve badem sütü.",
-      "fiyat": "95₺"
-    },
-    {
-      "ad": "Çilekli Rüyası",
-      "aciklama": "Bol çilek, yoğurt ve bal, klasikleşmiş bir lezzet.",
-      "fiyat": "78₺"
-    },
-    {
-      "ad": "Avokadolu Canlılık",
-      "aciklama": "Avokado, ıspanak, muz ve chia tohumları.",
-      "fiyat": "90₺"
-    },
-    {
-      "ad": "Kavunlu & Nane",
-      "aciklama": "Soğuk kavun parçaları, taze nane ve limon suyu.",
-      "fiyat": "75₺"
-    },
-    {
-      "ad": "Şeftalili İhtişam",
-      "aciklama": "Taze şeftali, vanilyalı yoğurt ve bir tutam tarçın.",
-      "fiyat": "80₺"
-    },
-    {
-      "ad": "Yaban Mersinli Detoks",
-      "aciklama": "Yaban mersini, keten tohumu, badem sütü ve bal.",
-      "fiyat": "88₺"
-    },
-    {
-      "ad": "Zencefilli Pancar",
-      "aciklama": "Pancar, havuç, zencefil ve portakal suyu, topraksı ve sağlıklı.",
-      "fiyat": "92₺"
+      "ad": "Protein Smoothie",
+      "aciklama": "Muz, yulaf, protein tozu ve badem sütü.",
+      "fiyat": "135 TL",
+      "fotograf_url": "images/protein.jpg"
     }
   ],
   "brewbar": [
     {
-      "ad": "V60 Filtre Kahve",
-      "aciklama": "Günlük değişen single origin çekirdekler, el demlemesi.",
-      "fiyat": "55₺"
-    },
-    {
-      "ad": "Chemex",
-      "aciklama": "Daha temiz ve pürüzsüz bir tat profili, büyük boyda servis edilir.",
-      "fiyat": "65₺"
-    },
-    {
-      "ad": "Aeropress",
-      "aciklama": "Basınçla demlenen yoğun ve temiz kahve, seyahat için ideal.",
-      "fiyat": "58₺"
-    },
-    {
-      "ad": "Sifon (Syphon)",
-      "aciklama": "Vakumlu demleme yöntemi, görsel şölen ve yoğun aroma.",
-      "fiyat": "70₺"
-    },
-    {
-      "ad": "Cold Brew (24 Saat)",
-      "aciklama": "24 saat soğuk suyla demlenmiş, düşük asitli ve pürüzsüz.",
-      "fiyat": "60₺"
-    },
-    {
-      "ad": "Japon Buzlu Kahve",
-      "aciklama": "Sıcak demlenip anında buz üzerinde soğutulur, parlak lezzet.",
-      "fiyat": "58₺"
-    },
-    {
-      "ad": "French Press",
-      "aciklama": "Zengin gövdeli ve tortulu klasik demleme yöntemi.",
-      "fiyat": "45₺"
-    },
-    {
-      "ad": "Pour Over (Kalita Wave)",
-      "aciklama": "Düz tabanlı demleyici ile eşit ekstraksiyon ve dengeli tat.",
-      "fiyat": "55₺"
-    },
-    {
-      "ad": "Nitro Cold Brew",
-      "aciklama": "Azot gazı ile doldurulmuş, kadifemsi ve kremsi dokulu Cold Brew.",
-      "fiyat": "75₺"
-    },
-    {
-      "ad": "Türk Kahvesi",
-      "aciklama": "Geleneksel yöntemlerle kısık ateşte pişirilmiş yoğun kahve.",
-      "fiyat": "40₺"
+      "ad": "V60 Demleme",
+      "aciklama": "Günün özel single origin çekirdeği.",
+      "fiyat": "95 TL",
+      "fotograf_url": "images/v60.jpg"
     }
   ],
   "yemekler": [
     {
-      "ad": "Kulüp Sandviç",
-      "aciklama": "Izgara tavuk, domates, marul, peynir ve özel sos, patates kızartması ile.",
-      "fiyat": "120₺"
-    },
-    {
-      "ad": "Vegan Wrap",
-      "aciklama": "Meksika fasulyesi, avokado, mısır ve özel baharatlarla hazırlanmış tam buğday lavaş.",
-      "fiyat": "110₺"
-    },
-    {
-      "ad": "Sebzeli Quiche",
-      "aciklama": "Günlük taze sebzeler ve kremalı peynir dolgulu Fransız tartı.",
-      "fiyat": "95₺"
-    },
-    {
-      "ad": "Somonlu Salata",
-      "aciklama": "Fırınlanmış somon filetosu, mevsim yeşillikleri ve özel sos.",
-      "fiyat": "180₺"
-    },
-    {
-      "ad": "Cheeseburger",
-      "aciklama": "Ev yapımı köfte, eritilmiş cheddar peyniri ve karamelize soğan.",
-      "fiyat": "145₺"
-    },
-    {
-      "ad": "Tavuklu Sezar Salata",
-      "aciklama": "Izgara tavuk, kıtır ekmek, parmesan ve özel Sezar sosu.",
-      "fiyat": "130₺"
-    },
-    {
-      "ad": "Penne Arabiata",
-      "aciklama": "Acı domates soslu İtalyan makarnası, isteğe bağlı parmesan.",
-      "fiyat": "115₺"
-    },
-    {
-      "ad": "Kahvaltı Tabağı",
-      "aciklama": "Peynir çeşitleri, zeytin, domates, salatalık, haşlanmış yumurta ve ekmek.",
-      "fiyat": "160₺"
-    },
-    {
-      "ad": "Izgara Köfte",
-      "aciklama": "Özel baharatlı ızgara köfteler, pilav ve közlenmiş biber eşliğinde.",
-      "fiyat": "155₺"
-    },
-    {
-      "ad": "Mantar Çorbası",
-      "aciklama": "Günlük taze krema bazlı mantar çorbası, kruton ile servis edilir.",
-      "fiyat": "60₺"
+      "ad": "Flue Burger",
+      "aciklama": "Özel soslu ev yapımı köfte, karamelize soğan.",
+      "fiyat": "220 TL",
+      "fotograf_url": "images/yemek1.jpg"
     }
   ]
 }
