@@ -1,5 +1,12 @@
 {
-  "sicakicecekler": [],
+  "sicakicecekler": [
+    {
+      "ad": "Çay",
+      "aciklama": "Çay 200 derecede hazırlanmıştır ",
+      "fiyat": "1251",
+      "fotograf_url": "/images/herbal1.jpg"
+    }
+  ],
   "tatlilar": [],
   "herbalteas": [],
   "coctails": [],
