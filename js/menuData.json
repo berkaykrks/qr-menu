@@ -1,70 +1,9 @@
 {
-  "sicakicecekler": [
-    {
-      "ad": "Flue Özel Latte",
-      "aciklama": "Yöresel kahve çekirdekleri ve buharlanmış süt ile hazırlanmıştır.",
-      "fiyat": "85 TL",
-      "fotograf_url": "images/latte.jpg" 
-    },
-    {
-      "ad": "Americano",
-      "aciklama": "Yoğun espresso tadını su ile dengeledik.",
-      "fiyat": "70 TL",
-      "fotograf_url": "images/americano.jpg"
-    }
-  ],
-  "tatlilar": [
-    {
-      "ad": "Red Velvet Cheesecake",
-      "aciklama": "Kremalı peynir dolgulu, kadife kek tabanlı.",
-      "fiyat": "150 TL",
-      "fotograf_url": "images/redbas.jpg"
-    },
-    {
-      "ad": "Sufle",
-      "aciklama": "Çikolata severler için sıcak bir kaçış.",
-      "fiyat": "110 TL",
-      "fotograf_url": "images/sufle.jpg"
-    }
-  ],
-  "herbalteas": [
-    {
-      "ad": "Zencefilli Kış Çayı",
-      "aciklama": "Zencefil, limon, bal ve taze nane karışımı.",
-      "fiyat": "65 TL",
-      "fotograf_url": "images/herbal_winter.jpg"
-    }
-  ],
-  "coctails": [
-    {
-      "ad": "Mojito",
-      "aciklama": "Taze nane, misket limonu ve soda.",
-      "fiyat": "120 TL",
-      "fotograf_url": "images/mojito.jpg"
-    }
-  ],
-  "smoothies": [
-    {
-      "ad": "Protein Smoothie",
-      "aciklama": "Muz, yulaf, protein tozu ve badem sütü.",
-      "fiyat": "135 TL",
-      "fotograf_url": "images/protein.jpg"
-    }
-  ],
-  "brewbar": [
-    {
-      "ad": "V60 Demleme",
-      "aciklama": "Günün özel single origin çekirdeği.",
-      "fiyat": "95 TL",
-      "fotograf_url": "images/v60.jpg"
-    }
-  ],
-  "yemekler": [
-    {
-      "ad": "Flue Burger",
-      "aciklama": "Özel soslu ev yapımı köfte, karamelize soğan.",
-      "fiyat": "220 TL",
-      "fotograf_url": "images/yemek1.jpg"
-    }
-  ]
+  "sicakicecekler": [],
+  "tatlilar": [],
+  "herbalteas": [],
+  "coctails": [],
+  "smoothies": [],
+  "brewbar": [],
+  "yemekler": []
 }

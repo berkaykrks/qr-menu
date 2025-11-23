@@ -1,0 +1,101 @@
+# -----------------------------------------------------------
+# Netlify CMS Yapılandırması (admin/config.yml)
+# -----------------------------------------------------------
+
+backend:
+  name: git-gateway
+  branch: main # Deponuzdaki ana dal adı
+
+# Medya (Fotoğraf Yükleme) Ayarları
+media_folder: "images" # Yüklenen görsellerin kaydedileceği klasör
+public_folder: "/images" # Görsellerin genel erişim yolu
+
+publish_mode: editorial_workflow 
+
+# Koleksiyonlar (Veri Yapısı)
+collections:
+  - name: 'menu'
+    label: 'QR Menü Yönetimi'
+    files:
+      - file: 'js/menuData.json'
+        label: 'Menü İçerikleri'
+        name: 'menu_icerikleri'
+        format: 'json' 
+        
+        fields:
+          # --- SICAK İÇECEKLER ---
+          - label: 'SICAK İÇECEKLER'
+            name: 'sicakicecekler'
+            widget: 'list' 
+            collapsed: true
+            fields: 
+              - { label: 'Ürün Adı', name: 'ad', widget: 'string' }
+              - { label: 'Açıklama', name: 'aciklama', widget: 'text' }
+              - { label: 'Fiyat', name: 'fiyat', widget: 'string' }
+              - { label: 'Fotoğraf', name: 'fotograf_url', widget: 'image', allow_null: true }
+
+          # --- TATLILAR ---
+          - label: 'TATLI ÇEŞİTLERİ'
+            name: 'tatlilar'
+            widget: 'list' 
+            collapsed: true
+            fields:
+              - { label: 'Ürün Adı', name: 'ad', widget: 'string' }
+              - { label: 'Açıklama', name: 'aciklama', widget: 'text' }
+              - { label: 'Fiyat', name: 'fiyat', widget: 'string' }
+              - { label: 'Fotoğraf', name: 'fotograf_url', widget: 'image', allow_null: true }
+              
+          # --- HERBAL TEAS ---
+          - label: 'HERBAL TEAS'
+            name: 'herbalteas'
+            widget: 'list' 
+            collapsed: true
+            fields:
+              - { label: 'Ürün Adı', name: 'ad', widget: 'string' }
+              - { label: 'Açıklama', name: 'aciklama', widget: 'text' }
+              - { label: 'Fiyat', name: 'fiyat', widget: 'string' }
+              - { label: 'Fotoğraf', name: 'fotograf_url', widget: 'image', allow_null: true }
+
+          # --- COCTAILS ---
+          - label: 'COCTAILS'
+            name: 'coctails'
+            widget: 'list' 
+            collapsed: true
+            fields:
+              - { label: 'Ürün Adı', name: 'ad', widget: 'string' }
+              - { label: 'Açıklama', name: 'aciklama', widget: 'text' }
+              - { label: 'Fiyat', name: 'fiyat', widget: 'string' }
+              - { label: 'Fotoğraf', name: 'fotograf_url', widget: 'image', allow_null: true }
+              
+          # --- SMOOTHIES ---
+          - label: 'SMOOTHIES'
+            name: 'smoothies'
+            widget: 'list' 
+            collapsed: true
+            fields:
+              - { label: 'Ürün Adı', name: 'ad', widget: 'string' }
+              - { label: 'Açıklama', name: 'aciklama', widget: 'text' }
+              - { label: 'Fiyat', name: 'fiyat', widget: 'string' }
+              - { label: 'Fotoğraf', name: 'fotograf_url', widget: 'image', allow_null: true }
+
+          # --- BREW BAR ---
+          - label: 'BREW BAR'
+            name: 'brewbar'
+            widget: 'list' 
+            collapsed: true
+            fields:
+              - { label: 'Ürün Adı', name: 'ad', widget: 'string' }
+              - { label: 'Açıklama', name: 'aciklama', widget: 'text' }
+              - { label: 'Fiyat', name: 'fiyat', widget: 'string' }
+              - { label: 'Fotoğraf', name: 'fotograf_url', widget: 'image', allow_null: true }
+              
+          # --- YEMEKLER ---
+          - label: 'YEMEKLER'
+            name: 'yemekler'
+            widget: 'list' 
+            collapsed: true
+            fields:
+              - { label: 'Ürün Adı', name: 'ad', widget: 'string' }
+              - { label: 'Açıklama', name: 'aciklama', widget: 'text' }
+              - { label: 'Fiyat', name: 'fiyat', widget: 'string' }
+              - { label: 'Fotoğraf', name: 'fotograf_url', widget: 'image', allow_null: true }
