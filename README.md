@@ -1,4 +1,4 @@
-# Kütüphane Otomasyonu
+# QRCODE Menü
 
 Bu Proje bir QR Code'lu menü projesidir 
 
