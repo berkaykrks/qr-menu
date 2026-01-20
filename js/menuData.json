@@ -7,7 +7,14 @@
       "fotograf_url": "/images/herbal1.jpg"
     }
   ],
-  "tatlilar": [],
+  "tatlilar": [
+    {
+      "ad": "brownie",
+      "aciklama": "brownie sıcak ve akışkan",
+      "fiyat": "3 $",
+      "fotograf_url": "/images/brownie.jpg"
+    }
+  ],
   "herbalteas": [],
   "coctails": [],
   "smoothies": [],
